@@ -40,3 +40,9 @@ Desktop.ini
 *~
 
 local.settings.json
+
+# Entorno virtual de Python
+.venv/
+
+# Variables de entorno y credenciales
+backend/.env
