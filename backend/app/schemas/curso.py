@@ -18,11 +18,15 @@ class CursoUpdate(CursoBase):
     pass
 
 
+
 class CursoResponse(CursoBase):
     id: int = Field(validation_alias="id_curso")
 
-    model_config = ConfigDict(
-        from_attributes=True,
-        populate_by_name=True
+    periodos_por_semana: int = Field(
+        gt=0,
+        validation_alias="horas_semanales"
     )
+
+    model_config = ConfigDict(from_attributes=True)
+
 
