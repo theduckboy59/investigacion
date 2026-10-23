@@ -32,8 +32,10 @@ class PeriodoUpdate(PeriodoBase):
     pass
 
 
+
 class PeriodoResponse(PeriodoBase):
-    id: int
+    id: int = Field(validation_alias="id_periodo")
     estado: bool
 
     model_config = ConfigDict(from_attributes=True)
+
