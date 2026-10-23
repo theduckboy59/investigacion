@@ -18,6 +18,11 @@ class SeccionUpdate(SeccionBase):
 
 
 class SeccionResponse(SeccionBase):
-    id: int
+    id: int = Field(validation_alias="id_seccion")
+    curso_id: int = Field(validation_alias="id_curso")
+    periodo_id: int = Field(validation_alias="id_periodo")
+    alumnos_inscritos: int = Field(
+        validation_alias="cantidad_estudiantes"
+    )
 
     model_config = ConfigDict(from_attributes=True)
