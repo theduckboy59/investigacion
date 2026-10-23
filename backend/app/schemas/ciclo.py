@@ -16,6 +16,7 @@ class CicloUpdate(CicloBase):
 
 
 class CicloResponse(CicloBase):
-    id: int
+    id: int = Field(validation_alias="id_ciclo")
 
     model_config = ConfigDict(from_attributes=True)
+
