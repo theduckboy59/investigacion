@@ -16,7 +16,8 @@ class CarreraUpdate(CarreraBase):
 
 
 class CarreraResponse(CarreraBase):
-    id: int
+    id: int = Field(validation_alias="id_carrera")
     estado: bool
 
     model_config = ConfigDict(from_attributes=True)
+
